@@ -1,4 +1,4 @@
-const BASE_URL = "https://my-json-server.typicode.com/BSenichak/wm_shop"
+const BASE_URL = "https://my-json-server.typicode.com/timofey927/wm_shop"
 let main = document.querySelector("main")
 let products = []
 
@@ -21,8 +21,15 @@ function drawProducts(){
         <div class="product">
             <h3>${p.name}</h3>
             <h4>$${p.price}</h4>
-            <a href="/seller/${p.user_id}">Seller page</a>
+            <a href="/seller.html?user_id=${p.user_id}">Seller page</a>
         </div>
         `
     })
 }
+
+let cartButton = document.getElementById("cart")
+
+let cartIsOpen = false
+cartButton.addEventListener("click", function(){
+    cartIsOpen = !cartIsOpen
+})
