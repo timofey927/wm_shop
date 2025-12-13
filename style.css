@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    right: 50rem;
     box-sizing: border-box;
 }
 
@@ -53,15 +54,27 @@ header {
 .cart {
     position: absolute;
     width: 300px;
-    right: -0.5rem;
+    right: -0.4rem;
     top: 2.3rem;
     background-color: white;
+    border-radius: 0.5rem;
+    display: flex; 
+    flex-direction: column;
+    padding: 0.3rem;
+    gap: o.3rem;
+}
+
+.cart li {
+    list-style: none;
+    background-color: #a0b9e4;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
 }
 
 .cart:before {
     content: "";
-    height: 1rem;
-    z-index: 5;
+    height: 0.3rem;
+    z-index: -1;
     position: absolute;
     bottom: 1.3rem;
     right: 0.2rem;
